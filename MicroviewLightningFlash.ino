@@ -15,7 +15,7 @@ void setup() {
 }
 
 void loop() {
-  flashes = random(1,3);
+  flashes = random(1,4);
   for(int j=0; j<flashes; j++) {
     flash();
     flashOff();
