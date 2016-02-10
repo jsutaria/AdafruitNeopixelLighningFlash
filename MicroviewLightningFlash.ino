@@ -1,9 +1,8 @@
 
 #include <Adafruit_GFX.h>
-#include <Adafruit_NeoMatrix.h>
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 6
+#define PIN 6 
 #define NUMPIXELS 40
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
   
@@ -13,8 +12,6 @@ int flashes; //number of flashes
 void setup() {
   strip.begin();
   strip.show();
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(60, PIN, NEO_GRB + NEO_KHZ800);
-  
 }
 
 void loop() {
@@ -27,15 +24,14 @@ void loop() {
   delay(delayVal);
 }
 
-
 void flash() {
+  
   for(int i=0; i < NUMPIXELS; i++) {
     strip.setPixelColor(i, strip.Color(177, 177, 177));
     strip.show();
   }
-  lightningFlash = random(50,200);
+  lightningFlash = random(50, 200);
   delay(lightningFlash);
-  
 }
 
 void flashOff() {
